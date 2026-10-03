@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="fr" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/png" href="/favicon.png"><meta name="generator" content="Astro v7.3.5"><meta name="description" content="Déploiement de FreshRSS sur mon homelab (Docker, reverse proxy, VPN), organisation d'une veille quotidienne triée automatiquement, page de lecture branchée sur son API, et relevé des favoris dans ce portfolio."><meta name="author" content="Johan Danais"><link rel="canonical" href="https://portfolio.aqualenis.fr/projects/veille-freshrss/"><meta property="og:type" content="article"><meta property="og:site_name" content="Johan Danais — Portfolio"><meta property="og:locale" content="fr_FR"><meta property="og:url" content="https://portfolio.aqualenis.fr/projects/veille-freshrss/"><meta property="og:title" content="Veille auto-hébergée : FreshRSS et ma page de lecture"><meta property="og:description" content="Déploiement de FreshRSS sur mon homelab (Docker, reverse proxy, VPN), organisation d'une veille quotidienne triée automatiquement, page de lecture branchée sur son API, et relevé des favoris dans ce portfolio."><meta property="og:image" content="https://portfolio.aqualenis.fr/images/veille/couverture-1500.webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Veille auto-hébergée : FreshRSS et ma page de lecture"><meta name="twitter:description" content="Déploiement de FreshRSS sur mon homelab (Docker, reverse proxy, VPN), organisation d'une veille quotidienne triée automatiquement, page de lecture branchée sur son API, et relevé des favoris dans ce portfolio."><meta name="twitter:image" content="https://portfolio.aqualenis.fr/images/veille/couverture-1500.webp"><!-- Police hébergée avec le site (public/fonts) : aucune requête vers
+             un service tiers, le site fonctionne hors connexion. --><link rel="preload" href="/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin><title>Veille auto-hébergée : FreshRSS et ma page de lecture</title><meta name="astro-view-transitions-enabled" content="true"> <meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CTgtIFyY.js"></script><link rel="stylesheet" href="/_astro/Layout.-RctzxgW.css"><link rel="stylesheet" href="/_astro/_slug_.RT-Z97gE.css"><style>[data-astro-transition-scope="astro-fwkvbled-1"] { view-transition-name: visuel-veille-freshrss; }@layer astro { ::view-transition-old(visuel-veille-freshrss) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(visuel-veille-freshrss) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(visuel-veille-freshrss) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(visuel-veille-freshrss) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fwkvbled-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fwkvbled-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fwkvbled-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fwkvbled-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fwkvbled-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fwkvbled-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fwkvbled-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fwkvbled-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-5buac6qq-2"] { view-transition-name: titre-veille-freshrss; }@layer astro { ::view-transition-old(titre-veille-freshrss) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(titre-veille-freshrss) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(titre-veille-freshrss) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(titre-veille-freshrss) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-5buac6qq-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-5buac6qq-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-5buac6qq-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-5buac6qq-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-5buac6qq-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-5buac6qq-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-5buac6qq-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-5buac6qq-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <!-- Le fond animé (#fond-vivant) est calé sur le body : rien ne doit dépasser
+	     sous le body, sinon le bas de page apparaît sans fond. flow-root y contient
+	     les marges des enfants ; un élément « fixed » placé dans un bloc animé
+	     (transform) dépasserait aussi : voir l'infobulle de l'accueil. --> <body class="relative flow-root bg-void text-white font-['Space_Grotesk'] antialiased min-h-screen selection:bg-emerald-500 selection:text-black overflow-x-hidden"> <div data-astro-transition-persist="fond" id="fond-vivant" aria-hidden="true"> <div class="fond-points"></div> <div class="fond-grain"></div> <div class="fond-halos"> <div class="halo halo-emeraude" style="--k:.35; top:-220px; left:calc(50% - 560px); width:1120px; height:640px"></div> <div class="halo halo-cyan" style="--k:.2; top:32%; right:-260px; width:720px; height:720px"></div> <div class="halo halo-emeraude halo-doux" style="--k:.28; top:62%; left:-300px; width:780px; height:780px"></div> <div class="halo halo-violet" style="--k:.15; top:86%; left:30%; width:660px; height:520px"></div> </div> <canvas id="reseau"></canvas> <div id="lueur-souris"></div> </div><script type="module">var e=matchMedia(`(prefers-reduced-motion: reduce)`).matches,t=matchMedia(`(pointer: fine)`).matches,n=document.documentElement;if(!e){let e=0,t=()=>{e=0,n.style.setProperty(`--defil`,String(window.scrollY))};addEventListener(`scroll`,()=>{e||=requestAnimationFrame(t)},{passive:!0}),document.addEventListener(`astro:after-swap`,t)}var r={x:-9999,y:-9999};if(t){let e=0;document.addEventListener(`pointermove`,t=>{r.x=t.clientX,r.y=t.clientY+window.scrollY,cancelAnimationFrame(e),e=requestAnimationFrame(()=>{let e=document.getElementById(`lueur-souris`);e&&(e.style.setProperty(`--souris-x`,`${t.clientX}px`),e.style.setProperty(`--souris-y`,`${t.clientY}px`),e.classList.add(`active`))})},{passive:!0})}var i=document.getElementById(`reseau`),a=i?.getContext(`2d`);if(i&&a){let t=0,n=0,o=1,s=[],c=[],l=()=>{o=Math.min(window.devicePixelRatio||1,2),t=i.clientWidth,n=i.clientHeight,i.width=t*o,i.height=n*o,a.setTransform(o,0,0,o,0,0);let e=Math.max(28,Math.min(95,Math.round(t*n/15e3)));s=Array.from({length:e},()=>({x:Math.random()*t,y:Math.random()*n,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,hub:Math.random()<.13,phase:Math.random()*Math.PI*2})),c.length=0},u=e=>s.filter(t=>t!==e&&Math.hypot(e.x-t.x,e.y-t.y)<170),d=()=>{let e=s.filter(e=>e.hub),t=e[Math.floor(Math.random()*e.length)];if(!t)return;let n=u(t);n.length&&c.push({de:t,vers:n[Math.floor(Math.random()*n.length)],t:0,vitesse:.008+Math.random()*.01})},f=0,p=()=>{a.clearRect(0,0,t,n),f+=1,a.lineWidth=1;for(let e=0;e<s.length;e++){let t=s[e];for(let n=e+1;n<s.length;n++){let e=s[n],r=Math.hypot(t.x-e.x,t.y-e.y);if(r<170){let n=(1-r/170)*(t.hub||e.hub?.32:.18);a.strokeStyle=t.hub||e.hub?`rgba(52, 211, 153, ${n})`:`rgba(148, 163, 184, ${n})`,a.beginPath(),a.moveTo(t.x,t.y),a.lineTo(e.x,e.y),a.stroke()}}let n=Math.hypot(t.x-r.x,t.y-r.y);n<190&&(a.strokeStyle=`rgba(52, 211, 153, ${(1-n/190)*.45})`,a.beginPath(),a.moveTo(t.x,t.y),a.lineTo(r.x,r.y),a.stroke())}for(let e of s)if(e.hub){let t=(Math.sin(f*.03+e.phase)+1)/2;a.strokeStyle=`rgba(52, 211, 153, ${.15+t*.3})`,a.beginPath(),a.arc(e.x,e.y,7+t*5,0,Math.PI*2),a.stroke(),a.fillStyle=`rgba(52, 211, 153, 0.95)`,a.beginPath(),a.arc(e.x,e.y,3,0,Math.PI*2),a.fill()}else a.fillStyle=`rgba(148, 163, 184, 0.55)`,a.beginPath(),a.arc(e.x,e.y,1.6,0,Math.PI*2),a.fill();for(let e of c){let t=e.de.x+(e.vers.x-e.de.x)*e.t,n=e.de.y+(e.vers.y-e.de.y)*e.t,r=a.createRadialGradient(t,n,0,t,n,10);r.addColorStop(0,`rgba(167, 243, 208, 0.95)`),r.addColorStop(1,`rgba(52, 211, 153, 0)`),a.fillStyle=r,a.beginPath(),a.arc(t,n,10,0,Math.PI*2),a.fill()}},m=()=>{for(let e of s)e.x+=e.vx,e.y+=e.vy,(e.x<-20||e.x>t+20)&&(e.vx*=-1),(e.y<-20||e.y>n+20)&&(e.vy*=-1);for(let e=c.length-1;e>=0;e--){let t=c[e];if(t.t+=t.vitesse,t.t>=1){let n=Math.random()<.6?u(t.vers):[];n.length?(t.de=t.vers,t.vers=n[Math.floor(Math.random()*n.length)],t.t=0):c.splice(e,1)}}c.length<4&&Math.random()<.02&&d()},h=0,g=!0,_=()=>{m(),p(),h=requestAnimationFrame(_)},v=()=>{!h&&g&&!document.hidden&&!e&&(h=requestAnimationFrame(_))},y=()=>{cancelAnimationFrame(h),h=0};l(),p(),e||(new IntersectionObserver(([e])=>{g=e.isIntersecting,g?v():y()}).observe(i),document.addEventListener(`visibilitychange`,()=>document.hidden?y():v()),v());let b=0;addEventListener(`resize`,()=>{clearTimeout(b),b=window.setTimeout(()=>{l(),p()},200)})}</script>  <div class="fixed top-0 left-0 w-full h-1 z-50 bg-gray-800 print:hidden"> <div id="progress-bar" class="h-full bg-emerald-500 origin-left scale-x-0 transition-transform duration-100 ease-out"></div> </div> <header class="relative w-full h-[400px] overflow-hidden print:h-auto print:overflow-visible">  <div class="absolute inset-0 print:hidden"> <img data-astro-transition-scope="astro-fwkvbled-1" src="/images/veille/couverture-1500.webp" alt="" class="w-full h-full object-cover opacity-35 [mask-image:linear-gradient(to_bottom,black_30%,transparent)]"> <div class="absolute inset-0 bg-linear-to-r from-void/70 to-transparent [mask-image:linear-gradient(to_bottom,black_30%,transparent)]"></div> </div> <div class="absolute bottom-0 left-0 w-full max-w-4xl mx-auto px-6 pb-12 z-10 print:static print:px-0 print:pb-4"> <nav aria-label="Fil d'Ariane" class="font-mono text-sm mb-6"> <ol class="flex flex-wrap items-center gap-x-0.5 text-muted"> <li class="flex items-center"> <span class="text-glow mr-2 select-none" aria-hidden="true">$ cd</span> <a href="/" class="text-emerald-400 hover:text-white transition rounded-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500" aria-label="Accueil">~</a> </li> <li class="flex items-center"> <span class="px-0.5 text-white/30" aria-hidden="true">/</span> <a href="/#projects" class="text-emerald-400 hover:text-white transition rounded-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500"> realisations </a> </li><li class="flex items-center"> <span class="px-0.5 text-white/30" aria-hidden="true">/</span> <span class="text-gray-200" aria-current="page">veille-freshrss</span> </li> </ol> </nav> <div class="flex gap-2 mb-4"> <span class="px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-900/30 border border-emerald-500/20 rounded-full">
+#Homelab </span><span class="px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-900/30 border border-emerald-500/20 rounded-full">
+#Docker </span><span class="px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-900/30 border border-emerald-500/20 rounded-full">
+#Veille </span><span class="px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-900/30 border border-emerald-500/20 rounded-full">
+#Supervision </span> </div> <h1 data-astro-transition-scope="astro-5buac6qq-2" class="text-4xl md:text-5xl font-bold text-white mb-2 leading-tight md:leading-none"> Veille auto-hébergée : FreshRSS et ma page de lecture </h1> <p class="text-gray-400 flex flex-wrap items-center gap-x-4 gap-y-1 mt-4 font-mono text-sm"> <span><span class="text-emerald-400">⏱</span> oct. 2026 → en cours</span> <span class="text-gray-500">
+lecture 1 min · dossier détaillé 7 min </span> </p> </div> </header> <main class="min-h-screen px-4 sm:px-6 py-12 relative"> <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-64 bg-emerald-500/5 blur-[120px] pointer-events-none z-0"></div> <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 relative z-10 print:block"> <aside class="hidden lg:block lg:w-1/4 print:hidden"> <div class="sticky top-24 bg-[#0f0f0f]/80 backdrop-blur-md border border-white/10 p-6 rounded-3xl shadow-xl"> <h2 class="text-white font-bold mb-4 flex items-center gap-2 uppercase tracking-wider text-sm"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-500"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path><path d="M12 3v6"></path></svg>
+Sommaire
+</h2> <ul class="space-y-3 border-l border-white/10 pl-4"> <li> <a href="#lessentiel" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> L’essentiel </a> </li><li> <a href="#contexte" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Contexte </a> </li><li> <a href="#environnement-technologique" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Environnement technologique </a> </li><li> <a href="#architecture" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Architecture </a> </li><li> <a href="#actions-réalisées" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Actions réalisées </a> </li><li> <a href="#tests-réalisés" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Tests réalisés </a> </li><li> <a href="#difficultés-rencontrées--solutions" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Difficultés rencontrées &amp; Solutions </a> </li><li> <a href="#prochaine-étape--la-sauvegarde" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Prochaine étape : la sauvegarde </a> </li><li> <a href="#competences-bts-sio" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Compétences BTS SIO </a> </li> </ul> </div> </aside> <article class="w-full lg:w-3/4 print:w-full prose-content relative card p-5 sm:p-8 md:p-12 surface border border-white/10 rounded-3xl shadow-2xl"> <div class="en-bref">
+<p><span>Contexte</span>Ma veille n'avait pas d'outil dédié, et la page Veille de ce portfolio dépendait d'un service externe pour afficher une seule alerte du CERT-FR.</p>
+<p><span>Mon rôle</span>Seul : choix de l'outil, déploiement sur mon serveur personnel, sécurisation, organisation des sources, page de lecture et liaison avec le portfolio.</p>
+<p><span>Résultat</span>Une veille quotidienne triée automatiquement, consultable de partout par VPN, et un portfolio alimenté par mes vrais favoris, sans aucune dépendance externe.</p>
+</div>
+<h2 id="lessentiel">L’essentiel</h2>
+<ul>
+<li><strong>Le besoin :</strong> un lecteur unique, à moi, qui rassemble les alertes de sécurité et l’actualité de mon périmètre, et fait remonter ce qui me concerne.</li>
+<li><strong>Le déploiement :</strong> FreshRSS en conteneur Docker sur ma VM Debian (Proxmox), publié derrière le reverse proxy Caddy en HTTPS, accessible uniquement depuis chez moi ou par VPN.</li>
+<li><strong>L’organisation :</strong> neuf sources en trois dossiers, une règle qui étiquette automatiquement ce qui touche mon périmètre, des favoris pour ce que je retiens, et une politique d’archivage.</li>
+<li><strong>Une page de lecture :</strong> « Ma veille », une interface plus claire que celle de FreshRSS, pensée pour le tri du matin et branchée sur son API.</li>
+<li><strong>Le lien avec le portfolio :</strong> un script relève mes favoris et la dernière alerte du CERT-FR ; la page Veille se construit à partir de ce relevé, même hors connexion.</li>
+<li><strong>Supervisé :</strong> le service et la page de lecture sont surveillés par Uptime Kuma, avec une alerte en cas de panne.</li>
+</ul>
+<figure class="capture">
+<img src="/images/veille/ma-veille-1500.webp" srcset="/images/veille/ma-veille-800.webp 800w, /images/veille/ma-veille-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Page Ma veille : relevé des sept derniers jours en barres, filtres par dossier et étiquette, liste des articles du jour" loading="lazy" decoding="async" />
+<figcaption>« Ma veille » avec mes données réelles : le relevé de la semaine (en rouge, la part d'alertes), les filtres, et les articles du jour avec favori, étiquette et « lu » en un clic.</figcaption>
+</figure>
+<details class="dossier">
+<summary>Dossier détaillé : choix de l'outil, déploiement, sécurité, organisation, tests, difficultés</summary>
+<h2 id="contexte">Contexte</h2>
+<p>La veille est une compétence évaluée au BTS SIO, et c’est surtout une nécessité en administration systèmes : une faille publiée aujourd’hui peut être exploitée demain. Jusqu’ici, je consultais des sites un par un, sans outil pour trier. Côté portfolio, la page Veille interrogeait un service externe gratuit pour afficher la dernière alerte du CERT-FR : une dépendance fragile, et une seule source.</p>
+<p>Comme j’administre déjà un serveur personnel (homelab), j’ai choisi d’y héberger mon propre lecteur de flux RSS, et d’en faire la source unique de ma veille et de la page Veille du portfolio.</p>
+<h2 id="environnement-technologique">Environnement technologique</h2>
+<ul>
+<li><strong>Hyperviseur :</strong> Proxmox, sur un ancien PC reconverti en serveur</li>
+<li><strong>Système :</strong> VM Debian 13 avec Docker et Docker Compose</li>
+<li><strong>Lecteur de flux :</strong> FreshRSS (base SQLite intégrée)</li>
+<li><strong>Publication :</strong> reverse proxy Caddy, certificat wildcard Let’s Encrypt</li>
+<li><strong>Accès distant :</strong> VPN Tailscale (aucun port ouvert sur Internet)</li>
+<li><strong>Supervision :</strong> Uptime Kuma, alertes sur Discord</li>
+<li><strong>Page de lecture :</strong> HTML, CSS et JavaScript sans dépendance, servis par nginx</li>
+<li><strong>Liaison portfolio :</strong> script Node.js (API compatible Google Reader)</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Sources RSS (CERT-FR, ANSSI, Microsoft, Debian…)</span></span>
+<span class="line"><span>        │  actualisation toutes les 30 min</span></span>
+<span class="line"><span>        ▼</span></span>
+<span class="line"><span>FreshRSS ─ conteneur Docker, VM Debian, Proxmox</span></span>
+<span class="line"><span>        │  API (Google Reader)            ▲ HTTPS (Caddy)</span></span>
+<span class="line"><span>        ├──────────────┐                  │ réseau local ou VPN</span></span>
+<span class="line"><span>        ▼              ▼                  │</span></span>
+<span class="line"><span>  Ma veille       npm run veille ──▶ portfolio (relevé statique)</span></span>
+<span class="line"><span> (navigateur)        (mon PC)</span></span></code></pre>
+<h2 id="actions-réalisées">Actions réalisées</h2>
+<h3 id="1-choisir-loutil">1. Choisir l’outil</h3>
+<p>J’ai comparé les deux lecteurs auto-hébergés les plus utilisés :</p>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>FreshRSS</th>
+<th>Miniflux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base de données</td>
+<td>SQLite intégrée</td>
+<td>PostgreSQL à ajouter</td>
+</tr>
+<tr>
+<td>Tri</td>
+<td>Dossiers, étiquettes, filtres automatiques</td>
+<td>Catégories, règles</td>
+</tr>
+<tr>
+<td>API pour applis et scripts</td>
+<td>Oui (Google Reader, Fever)</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>Complète, un peu datée</td>
+<td>Minimaliste</td>
+</tr>
+</tbody>
+</table>
+<p><strong>FreshRSS</strong> l’a emporté : un seul conteneur à maintenir, et surtout des filtres capables d’étiqueter automatiquement les articles, ce qui répondait directement à mon besoin de tri.</p>
+<h3 id="2-déployer-le-service">2. Déployer le service</h3>
+<p>FreshRSS tourne dans un conteneur Docker, décrit dans un fichier Compose, sur le réseau Docker partagé avec Caddy. Aucun port n’est publié : seul le reverse proxy peut le joindre. J’ai ajouté un sous-domaine dans la configuration de Caddy, validé la configuration avant de la recharger, puis vérifié la réponse HTTP. L’assistant d’installation a contrôlé ses prérequis (PHP, extensions, droits sur les dossiers) avant la création du compte.</p>
+<figure class="capture">
+<img src="/images/veille/assistant-1500.webp" srcset="/images/veille/assistant-800.webp 800w, /images/veille/assistant-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Assistant d'installation de FreshRSS : toutes les vérifications PHP et de droits sur les fichiers sont au vert" loading="lazy" decoding="async" />
+<figcaption>L'assistant d'installation : les 18 vérifications (PHP, extensions, droits sur les dossiers) sont validées.</figcaption>
+</figure>
+<h3 id="3-sécuriser-les-accès">3. Sécuriser les accès</h3>
+<ul>
+<li><strong>Réseau :</strong> le service n’est joignable que depuis le réseau de la maison ou par le VPN Tailscale ; rien n’est exposé sur Internet.</li>
+<li><strong>Comptes :</strong> un compte nominatif, protégé par un mot de passe généré et rangé dans mon gestionnaire de mots de passe.</li>
+<li><strong>Moindre privilège :</strong> l’API utilise un <strong>mot de passe distinct</strong>, qui permet de lire et de marquer les articles mais pas de se connecter à l’interface. Le script du portfolio ne connaît que lui.</li>
+<li><strong>Pas de secret dans le code :</strong> les identifiants du script sont dans un fichier <code>.env</code>, exclu du dépôt Git.</li>
+</ul>
+<h3 id="4-organiser-la-veille">4. Organiser la veille</h3>
+<ul>
+<li><strong>Neuf sources en trois dossiers :</strong> <em>Alertes</em> (CERT-FR, ANSSI, Microsoft Security Update Guide, Debian Security), <em>Systèmes &amp; Réseau</em> (IT-Connect, LeMagIT, Proxmox, Docker) et <em>Maintenance</em> (les nouvelles versions de FreshRSS lui-même). Les adresses ont été vérifiées une à une puis importées d’un coup, par un fichier OPML.</li>
+<li><strong>Étiquetage automatique :</strong> tout nouvel article dont le titre contient un mot de mon périmètre (Windows, Microsoft, Edge, Outlook, Debian, Linux, Proxmox, Docker, pfSense) reçoit l’étiquette « Mon périmètre ». Sur les 89 alertes reçues en une semaine, je vois tout de suite celles qui me concernent.</li>
+<li><strong>Favoris et étiquettes manuelles :</strong> je mets en favori ce que je retiens, et j’étiquette « À tester au labo » ce que je veux essayer sur mon serveur.</li>
+<li><strong>Archivage :</strong> au plus 200 articles et un mois par flux, sans jamais supprimer les favoris ni les articles étiquetés.</li>
+</ul>
+<figure class="capture">
+<img src="/images/veille/abonnements-1500.webp" srcset="/images/veille/abonnements-800.webp 800w, /images/veille/abonnements-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Gestion des abonnements de FreshRSS : dossiers Alertes, Maintenance et Systèmes & Réseau avec leurs flux" loading="lazy" decoding="async" />
+<figcaption>Les sources, rangées en dossiers.</figcaption>
+</figure>
+<figure class="capture">
+<img src="/images/veille/etiquette-auto-1500.webp" alt="Réglage de l'étiquette Mon périmètre : une règle par ligne, intitle:Windows, intitle:Microsoft…" loading="lazy" decoding="async" />
+<figcaption>La règle d'étiquetage automatique : une recherche par ligne, limitée au titre pour éviter les faux positifs.</figcaption>
+</figure>
+<h3 id="5-une-page-de-lecture-pensée-pour-le-tri-du-matin">5. Une page de lecture pensée pour le tri du matin</h3>
+<p>L’interface de FreshRSS est complète mais peu agréable pour un tri rapide. J’ai donc ajouté une page de lecture, « Ma veille », qui utilise uniquement son API :</p>
+<ul>
+<li>un relevé des sept derniers jours, jour par jour, avec la part d’alertes ;</li>
+<li>les articles regroupés par jour, avec la couleur de leur dossier ;</li>
+<li>favori, étiquettes et « lu » en un clic, ou au clavier ;</li>
+<li>des filtres par dossier, par étiquette et sur les favoris, et une recherche.</li>
+</ul>
+<p>FreshRSS reste le moteur : abonnements, actualisation et règles automatiques. La page n’est qu’une interface, servie par un petit conteneur nginx.</p>
+<h3 id="6-relier-le-portfolio">6. Relier le portfolio</h3>
+<p>Un script (<code>npm run veille</code>) se connecte à l’API, relève la dernière alerte du CERT-FR et mes favoris avec leurs étiquettes, et enregistre le tout dans un fichier de données du portfolio. Le site reste statique : il se construit à partir de ce relevé, sans aucun appel réseau, ce qui permet de le présenter hors connexion. Si le serveur est injoignable, le script s’arrête sans toucher au relevé précédent.</p>
+<h3 id="7-superviser-et-maintenir">7. Superviser et maintenir</h3>
+<ul>
+<li><strong>Disponibilité :</strong> Uptime Kuma surveille FreshRSS et la page de lecture, et envoie une alerte sur Discord en cas de panne.</li>
+<li><strong>Redémarrage automatique</strong> des conteneurs, y compris après un redémarrage de la VM.</li>
+<li><strong>Mises à jour :</strong> le flux des nouvelles versions de FreshRSS fait partie de ma veille, dans le dossier <em>Maintenance</em>.</li>
+</ul>
+<figure class="capture">
+<img src="/images/veille/supervision-1500.webp" srcset="/images/veille/supervision-800.webp 800w, /images/veille/supervision-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Page de statut Uptime Kuma : tous les systèmes opérationnels, moniteurs Veille et Actu à 100 %" loading="lazy" decoding="async" />
+<figcaption>La page de statut d'Uptime Kuma : FreshRSS (Veille) et la page de lecture (Actu) disponibles à 100 %.</figcaption>
+</figure>
+<h2 id="tests-réalisés">Tests réalisés</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Résultat attendu</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Validation de la configuration Caddy</td>
+<td>« Valid configuration »</td>
+<td>Conforme</td>
+</tr>
+<tr>
+<td>Réponse HTTP du nouveau sous-domaine, et d’un service existant</td>
+<td>302 / 200, pas de 404</td>
+<td>Conforme</td>
+</tr>
+<tr>
+<td>Prérequis de l’assistant d’installation</td>
+<td>18 vérifications au vert</td>
+<td>Conforme</td>
+</tr>
+<tr>
+<td>Test de l’API (Google Reader et Fever)</td>
+<td>PASS</td>
+<td>Conforme</td>
+</tr>
+<tr>
+<td>Relevé du portfolio</td>
+<td>Alertes et favoris enregistrés</td>
+<td>5 alertes, 5 favoris</td>
+</tr>
+<tr>
+<td>Script avec un mauvais mot de passe, puis serveur injoignable</td>
+<td>Message clair, relevé précédent conservé</td>
+<td>Conforme</td>
+</tr>
+<tr>
+<td>Mot de passe API absent des journaux du serveur</td>
+<td>Aucune occurrence</td>
+<td>Conforme (après correction)</td>
+</tr>
+</tbody>
+</table>
+<figure class="capture">
+<img src="/images/veille/caddy-tests-1500.webp" srcset="/images/veille/caddy-tests-800.webp 800w, /images/veille/caddy-tests-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Terminal : validation de la configuration Caddy puis codes HTTP 302 et 200" loading="lazy" decoding="async" />
+<figcaption>Validation de la configuration du reverse proxy, puis contrôle des codes HTTP.</figcaption>
+</figure>
+<h2 id="difficultés-rencontrées--solutions">Difficultés rencontrées &amp; Solutions</h2>
+<table>
+<thead>
+<tr>
+<th>Problème constaté</th>
+<th>Cause identifiée</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Le nouveau sous-domaine répondait « Service inconnu » une fois ajouté au Caddyfile</td>
+<td>Le bloc d’un service existant n’était jamais refermé : le nouveau bloc s’est retrouvé imbriqué dedans</td>
+<td>Bloc refermé, sauvegarde de la configuration avant toute modification, test HTTP des services voisins</td>
+</tr>
+<tr>
+<td>Flux en erreur juste après l’import</td>
+<td>« database is locked » : SQLite n’accepte qu’une écriture à la fois, et l’import a lancé l’actualisation simultanée de sept flux, dont un de près de 600 articles</td>
+<td>Diagnostic par le journal et un test de connectivité depuis le conteneur (tous les sites répondaient), puis actualisation flux par flux</td>
+</tr>
+<tr>
+<td>Mot de passe API envoyé dans l’adresse</td>
+<td>FreshRSS avertit qu’une adresse peut finir dans les journaux du serveur</td>
+<td>Connexion du script passée en POST, vérifiée dans les journaux</td>
+</tr>
+<tr>
+<td>Purge sans effet malgré la politique d’archivage</td>
+<td>FreshRSS ne supprime jamais un article encore présent dans le flux d’origine ; le flux Microsoft republie tout son historique</td>
+<td>Comportement compris et accepté (base de 5 Mo) ; la page de lecture filtre sur la date de publication</td>
+</tr>
+</tbody>
+</table>
+<figure class="capture">
+<img src="/images/veille/diagnostic-1500.webp" srcset="/images/veille/diagnostic-800.webp 800w, /images/veille/diagnostic-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Terminal : journal FreshRSS avec l'erreur database is locked, puis test de chaque flux depuis le conteneur, tous en 200" loading="lazy" decoding="async" />
+<figcaption>Le diagnostic : le journal pointe un verrou de la base, et le test depuis le conteneur écarte une panne réseau.</figcaption>
+</figure>
+<h2 id="prochaine-étape--la-sauvegarde">Prochaine étape : la sauvegarde</h2>
+<p>Tout l’état du service (base, comptes, réglages) tient dans un seul dossier. La prochaine étape est une sauvegarde planifiée de ce dossier, hors de la VM, <strong>et un test de restauration</strong> pour vérifier qu’elle est réellement exploitable.</p>
+</details>
+ <section class="competences-article"> <h2 id="competences-bts-sio">Compétences BTS SIO</h2> <div class="ligne-e5"> <p class="ligne-e5-titre"> <span>Tableau E5</span> Réalisation en cours de formation · oct. 2026 → en cours </p> <ul> <li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Mettre en place son environnement d&#39;apprentissage personnel</strong> <span class="ligne-e5-comp"> (Organiser son développement professionnel)</span> <br> Homelab personnel (Proxmox, VM Debian, Docker) utilisé comme environnement d&#39;apprentissage </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Mettre en œuvre des outils et stratégies de veille informationnelle</strong> <span class="ligne-e5-comp"> (Organiser son développement professionnel)</span> <br> Veille quotidienne outillée : sources en dossiers, étiquetage automatique du périmètre, favoris </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Réaliser les tests d&#39;intégration et d&#39;acceptation d&#39;un service</strong> <span class="ligne-e5-comp"> (Mettre à disposition des utilisateurs un service informatique)</span> <br> Tests d&#39;intégration : configuration du reverse proxy, codes HTTP, prérequis, API, script de relevé </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Déployer un service</strong> <span class="ligne-e5-comp"> (Mettre à disposition des utilisateurs un service informatique)</span> <br> Déploiement d&#39;un service conteneurisé derrière un reverse proxy HTTPS (Caddy) </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Mettre en place et vérifier les niveaux d&#39;habilitation associés à un service</strong> <span class="ligne-e5-comp"> (Gérer le patrimoine informatique)</span> <br> Habilitations : compte nominatif, mot de passe API distinct (moindre privilège), accès limité au réseau local et au VPN </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Vérifier les conditions de la continuité d&#39;un service informatique</strong> <span class="ligne-e5-comp"> (Gérer le patrimoine informatique)</span> <br> Continuité : redémarrage automatique des conteneurs, supervision Uptime Kuma avec alerte </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Participer à l&#39;évolution d&#39;un site Web exploitant les données de l&#39;organisation</strong> <span class="ligne-e5-comp"> (Développer la présence en ligne de l&#39;organisation)</span> <br> Le portfolio exploite les données du service par son API (page Veille alimentée par les favoris) </span> </li> </ul> </div>  <p><a href="/competences">Voir le tableau de synthèse complet →</a></p> </section> </article> </div> <div class="max-w-4xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 print:hidden"> <a href="/projects/support-exploitation" class="group card p-6 surface border border-white/10 rounded-2xl shadow-lg transition-colors flex flex-col items-start text-left cursor-pointer"> <span class="text-xs text-muted uppercase tracking-wider mb-2 group-hover:text-emerald-400 transition-colors">
+← Projet Précédent
+</span> <span class="text-white font-bold text-lg line-clamp-2 group-hover:text-emerald-300 transition-colors"> Support N1/N2 et exploitation du parc informatique </span> </a>  </div> </main>   <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 print:hidden" aria-label="Navigation principale"> <div class="flex items-center gap-1 sm:gap-2 px-1.5 sm:px-2 py-1.5 sm:py-2 rounded-full bg-[#13151a]/85 backdrop-blur-md border border-[#2d3039] shadow-2xl">  <button type="button" data-ouvrir-palette aria-label="Ouvrir la palette de commandes (Ctrl+K)" title="Palette de commandes — Ctrl+K" class="group/pal relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-emerald-400 hover:bg-emerald-500/10 transition focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500"> <span class="absolute inset-1.5 rounded-full bg-emerald-500/10 animate-pulse" aria-hidden="true"></span> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="relative" aria-hidden="true"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg> <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/pal:opacity-100 group-focus-visible/pal:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl">
+Palette · Ctrl K
+</span> </button> <div class="flex items-center gap-1"> <div class="h-4 w-px bg-white/10 mx-1"></div> <a href="/" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-gray-400 hover:text-white hover:bg-white/10" aria-label="Home" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z M9 22V12h6v10"></path> </svg>   <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Home </span> </a><a href="/#projects" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-emerald-400 bg-emerald-500/10" aria-label="Projets" aria-current="page" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z"></path> </svg>  <span class="absolute -bottom-0.5 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-emerald-400" aria-hidden="true"></span> <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Projets </span> </a><a href="/competences" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-gray-400 hover:text-white hover:bg-white/10" aria-label="Compétences" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M22 10v6M2 10l10-5 10 5-10 5z M6 12v5c3 3 9 3 12 0v-5"></path> </svg>   <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Compétences </span> </a><a href="/veille" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-gray-400 hover:text-white hover:bg-white/10" aria-label="Veille" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M4 11a9 9 0 0 1 9 9 M4 4a16 16 0 0 1 16 16 M5 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path> </svg>   <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Veille </span> </a><a href="/mon_cv.pdf" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white gap-1.5 px-3 border border-emerald-500/30 text-gray-400 hover:text-white hover:bg-white/10" aria-label="CV" target="_blank" rel="noopener"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6 M16 13H8 M16 17H8 M10 9H8"></path> </svg> <span class="text-xs font-bold text-emerald-300" aria-hidden="true">CV</span>  <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> CV </span> </a><a href="mailto:johan.danais@gmail.com" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-gray-400 hover:text-white hover:bg-white/10" aria-label="Mail" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6"></path> </svg>   <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Mail </span> </a> </div> </div> </nav> <dialog data-astro-transition-persist="palette" id="palette" aria-label="Palette de commandes" class="palette m-auto mt-[12vh] w-[min(640px,calc(100vw-2rem))] p-0 rounded-2xl border border-emerald-500/30 text-white shadow-[0_0_60px_rgba(16,185,129,0.15)] backdrop:bg-black/60 backdrop:backdrop-blur-sm"> <div class="flex items-center gap-2 px-4 py-2.5 border-b border-white/5 bg-white/[0.02]"> <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span> <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span> <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span> <span class="ml-3 text-[11px] font-mono text-muted">johan@lybernet: ~ — palette</span> <kbd class="ml-auto text-[10px] font-mono text-muted border border-white/10 rounded px-1.5 py-0.5">Échap</kbd> </div> <label class="flex items-center gap-3 px-5 py-4 border-b border-white/5 font-mono"> <span class="text-glow select-none" aria-hidden="true">$</span> <input id="palette-saisie" type="text" autocomplete="off" spellcheck="false" placeholder="Aller à une page ou chercher un mot (veille, GPO, Proxmox…)" class="w-full bg-transparent outline-hidden text-base placeholder:text-muted" role="combobox" aria-expanded="true" aria-controls="palette-liste" aria-autocomplete="list"> </label> <ul id="palette-liste" role="listbox" class="max-h-[50vh] overflow-y-auto p-2"> <li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Navigation" data-href="/" data-recherche="Accueil cd ~ home accueil"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Accueil</span> <span class="text-[11px] font-mono text-muted truncate">cd ~</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Navigation</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Navigation" data-href="/#projects" data-recherche="Réalisations professionnelles cd ~/realisations projets missions"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Réalisations professionnelles</span> <span class="text-[11px] font-mono text-muted truncate">cd ~/realisations</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Navigation</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Navigation" data-href="/competences" data-recherche="Compétences — référentiel BTS SIO cd ~/competences bts sio blocs e4 e5 referentiel"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Compétences — référentiel BTS SIO</span> <span class="text-[11px] font-mono text-muted truncate">cd ~/competences</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Navigation</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Navigation" data-href="/veille" data-recherche="Veille technologique cd ~/veille cert-fr anssi securite"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Veille technologique</span> <span class="text-[11px] font-mono text-muted truncate">cd ~/veille</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Navigation</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/veille-freshrss" data-recherche="Veille auto-hébergée : FreshRSS et ma page de lecture cat veille-freshrss.md Homelab Docker Veille Supervision"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Veille auto-hébergée : FreshRSS et ma page de lecture</span> <span class="text-[11px] font-mono text-muted truncate">cat veille-freshrss.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/support-exploitation" data-recherche="Support N1/N2 et exploitation du parc informatique cat support-exploitation.md Exploitation Support utilisateur Active Directory Windows 11"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Support N1/N2 et exploitation du parc informatique</span> <span class="text-[11px] font-mono text-muted truncate">cat support-exploitation.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/pipeline-affiches-ia" data-recherche="Pipeline IA de production d'affiches cat pipeline-affiches-ia.md IA générative Gemini Automatisation Gestion de projet"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Pipeline IA de production d&#39;affiches</span> <span class="text-[11px] font-mono text-muted truncate">cat pipeline-affiches-ia.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/hub-academy" data-recherche="Hub Academy : prototype de formation gamifiée cat hub-academy.md Développement web Google Apps Script Google Sheets Gestion des droits"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Hub Academy : prototype de formation gamifiée</span> <span class="text-[11px] font-mono text-muted truncate">cat hub-academy.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/portfolio" data-recherche="Portfolio professionnel : conception et maintenance cat portfolio.md Développement professionnel Astro Référencement Veille"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Portfolio professionnel : conception et maintenance</span> <span class="text-[11px] font-mono text-muted truncate">cat portfolio.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/cyber-sensibilisation" data-recherche="Sensibilisation Cyber &amp; Hygiène Numérique cat cyber-sensibilisation.md Hygiène Numérique Cybersécurité Support Utilisateur Communication"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Sensibilisation Cyber &amp; Hygiène Numérique</span> <span class="text-[11px] font-mono text-muted truncate">cat cyber-sensibilisation.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="/mon_cv.pdf" data-externe="1" data-recherche="Ouvrir mon CV (PDF) open mon_cv.pdf cv curriculum telecharger"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Ouvrir mon CV (PDF)</span> <span class="text-[11px] font-mono text-muted truncate">open mon_cv.pdf</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="johan.danais@gmail.com" data-action="copier" data-recherche="Copier mon adresse e-mail copy johan.danais@gmail.com contact email courriel mail adresse copier"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Copier mon adresse e-mail</span> <span class="text-[11px] font-mono text-muted truncate">copy johan.danais@gmail.com</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="mailto:johan.danais@gmail.com" data-externe="1" data-recherche="M'écrire un mail mail johan.danais contact email courriel"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">M&#39;écrire un mail</span> <span class="text-[11px] font-mono text-muted truncate">mail johan.danais</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="https://www.linkedin.com/in/johan-danais-65a315198/" data-externe="1" data-recherche="Profil LinkedIn open linkedin reseau social"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Profil LinkedIn</span> <span class="text-[11px] font-mono text-muted truncate">open linkedin</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="https://github.com/merynger" data-externe="1" data-recherche="Profil GitHub open github code depot"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Profil GitHub</span> <span class="text-[11px] font-mono text-muted truncate">open github</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li> </ul> <p id="palette-vide" class="hidden px-5 py-6 text-sm font-mono text-muted">
+command not found — essayez « veille », « cv » ou un mot comme « Windows 11 ».
+</p> <div class="flex items-center gap-4 px-5 py-2.5 border-t border-white/5 text-[11px] font-mono text-muted"> <span><kbd class="text-gray-300">↑ ↓</kbd> choisir</span> <span><kbd class="text-gray-300">Entrée</kbd> ouvrir</span> <span id="palette-statut" class="text-glow" role="status" aria-live="polite"></span> <span class="ml-auto hidden sm:inline"><kbd class="text-gray-300">Ctrl K</kbd> ouvrir / fermer</span> </div> </dialog><script type="module" src="/_astro/CommandPalette.astro_astro_type_script_index_0_lang.B2F2nOL0.js"></script> </body> </html><script type="module">window.addEventListener(`scroll`,()=>{let e=(document.body.scrollTop||document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight),t=document.getElementById(`progress-bar`);t&&(t.style.transform=`scaleX(`+e+`)`)});function e(){document.querySelectorAll(`.card`).forEach(e=>{e.addEventListener(`mousemove`,t=>{let n=t,r=e.getBoundingClientRect(),i=n.clientX-r.left,a=n.clientY-r.top;e.style.setProperty(`--mouse-x`,`${i}px`),e.style.setProperty(`--mouse-y`,`${a}px`)})})}function t(){let e=document.getElementById(`carousel-container`),t=document.getElementById(`carousel-track`),n=document.getElementById(`prev-btn`),r=document.getElementById(`next-btn`);if(!e||!t||!n||!r)return;let i=t.querySelectorAll(`.flex-none`),a=0,o=i.length;function s(){t.style.transform=`translateX(-${a*100}%)`,n.disabled=a===0,r.disabled=a===o-1}n.addEventListener(`click`,()=>{a>0&&(a--,s())}),r.addEventListener(`click`,()=>{a<o-1&&(a++,s())}),s()}function n(){let e=e=>{let t=(e?document.getElementById(decodeURIComponent(e.slice(1))):null)?.closest(`details`);t&&!t.open&&(t.open=!0)};document.querySelectorAll(`a[href^="#"]`).forEach(t=>t.addEventListener(`click`,()=>e(t.hash))),e(location.hash)}document.addEventListener(`astro:page-load`,()=>{e(),t(),n()}),e(),t();var r=[];window.addEventListener(`beforeprint`,()=>{r=[...document.querySelectorAll(`details.dossier:not([open])`)],r.forEach(e=>e.open=!0)}),window.addEventListener(`afterprint`,()=>{r.forEach(e=>e.open=!1),r=[]});</script>

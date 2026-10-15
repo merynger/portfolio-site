@@ -1,0 +1,415 @@
+<!DOCTYPE html><html lang="fr" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/png" href="/favicon.png"><meta name="generator" content="Astro v7.3.5"><meta name="description" content="Prototype avancé, conçu et développé seul (front-end et back-end), d'une web app interne qui fait découvrir les astuces Google Workspace, hébergée sur Google Apps Script avec Google Sheets comme base de données."><meta name="author" content="Johan Danais"><link rel="canonical" href="https://portfolio.aqualenis.fr/projects/hub-academy/"><meta property="og:type" content="article"><meta property="og:site_name" content="Johan Danais — Portfolio"><meta property="og:locale" content="fr_FR"><meta property="og:url" content="https://portfolio.aqualenis.fr/projects/hub-academy/"><meta property="og:title" content="Hub Academy : prototype de formation gamifiée"><meta property="og:description" content="Prototype avancé, conçu et développé seul (front-end et back-end), d'une web app interne qui fait découvrir les astuces Google Workspace, hébergée sur Google Apps Script avec Google Sheets comme base de données."><meta property="og:image" content="https://portfolio.aqualenis.fr/images/hub/accueil-1500.webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Hub Academy : prototype de formation gamifiée"><meta name="twitter:description" content="Prototype avancé, conçu et développé seul (front-end et back-end), d'une web app interne qui fait découvrir les astuces Google Workspace, hébergée sur Google Apps Script avec Google Sheets comme base de données."><meta name="twitter:image" content="https://portfolio.aqualenis.fr/images/hub/accueil-1500.webp"><!-- Police hébergée avec le site (public/fonts) : aucune requête vers
+             un service tiers, le site fonctionne hors connexion. --><link rel="preload" href="/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin><title>Hub Academy : prototype de formation gamifiée</title><meta name="astro-view-transitions-enabled" content="true"> <meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CTgtIFyY.js"></script><link rel="stylesheet" href="/_astro/Layout.-RctzxgW.css"><link rel="stylesheet" href="/_astro/_slug_.RT-Z97gE.css"><style>[data-astro-transition-scope="astro-fwkvbled-1"] { view-transition-name: visuel-hub-academy; }@layer astro { ::view-transition-old(visuel-hub-academy) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(visuel-hub-academy) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(visuel-hub-academy) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(visuel-hub-academy) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fwkvbled-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fwkvbled-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fwkvbled-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fwkvbled-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-fwkvbled-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-fwkvbled-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-fwkvbled-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-fwkvbled-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-5buac6qq-2"] { view-transition-name: titre-hub-academy; }@layer astro { ::view-transition-old(titre-hub-academy) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(titre-hub-academy) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(titre-hub-academy) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(titre-hub-academy) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-5buac6qq-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-5buac6qq-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-5buac6qq-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-5buac6qq-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-5buac6qq-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-5buac6qq-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-5buac6qq-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-5buac6qq-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <!-- Le fond animé (#fond-vivant) est calé sur le body : rien ne doit dépasser
+	     sous le body, sinon le bas de page apparaît sans fond. flow-root y contient
+	     les marges des enfants ; un élément « fixed » placé dans un bloc animé
+	     (transform) dépasserait aussi : voir l'infobulle de l'accueil. --> <body class="relative flow-root bg-void text-white font-['Space_Grotesk'] antialiased min-h-screen selection:bg-emerald-500 selection:text-black overflow-x-hidden"> <div data-astro-transition-persist="fond" id="fond-vivant" aria-hidden="true"> <div class="fond-points"></div> <div class="fond-grain"></div> <div class="fond-halos"> <div class="halo halo-emeraude" style="--k:.35; top:-220px; left:calc(50% - 560px); width:1120px; height:640px"></div> <div class="halo halo-cyan" style="--k:.2; top:32%; right:-260px; width:720px; height:720px"></div> <div class="halo halo-emeraude halo-doux" style="--k:.28; top:62%; left:-300px; width:780px; height:780px"></div> <div class="halo halo-violet" style="--k:.15; top:86%; left:30%; width:660px; height:520px"></div> </div> <canvas id="reseau"></canvas> <div id="lueur-souris"></div> </div><script type="module">var e=matchMedia(`(prefers-reduced-motion: reduce)`).matches,t=matchMedia(`(pointer: fine)`).matches,n=document.documentElement;if(!e){let e=0,t=()=>{e=0,n.style.setProperty(`--defil`,String(window.scrollY))};addEventListener(`scroll`,()=>{e||=requestAnimationFrame(t)},{passive:!0}),document.addEventListener(`astro:after-swap`,t)}var r={x:-9999,y:-9999};if(t){let e=0;document.addEventListener(`pointermove`,t=>{r.x=t.clientX,r.y=t.clientY+window.scrollY,cancelAnimationFrame(e),e=requestAnimationFrame(()=>{let e=document.getElementById(`lueur-souris`);e&&(e.style.setProperty(`--souris-x`,`${t.clientX}px`),e.style.setProperty(`--souris-y`,`${t.clientY}px`),e.classList.add(`active`))})},{passive:!0})}var i=document.getElementById(`reseau`),a=i?.getContext(`2d`);if(i&&a){let t=0,n=0,o=1,s=[],c=[],l=()=>{o=Math.min(window.devicePixelRatio||1,2),t=i.clientWidth,n=i.clientHeight,i.width=t*o,i.height=n*o,a.setTransform(o,0,0,o,0,0);let e=Math.max(28,Math.min(95,Math.round(t*n/15e3)));s=Array.from({length:e},()=>({x:Math.random()*t,y:Math.random()*n,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,hub:Math.random()<.13,phase:Math.random()*Math.PI*2})),c.length=0},u=e=>s.filter(t=>t!==e&&Math.hypot(e.x-t.x,e.y-t.y)<170),d=()=>{let e=s.filter(e=>e.hub),t=e[Math.floor(Math.random()*e.length)];if(!t)return;let n=u(t);n.length&&c.push({de:t,vers:n[Math.floor(Math.random()*n.length)],t:0,vitesse:.008+Math.random()*.01})},f=0,p=()=>{a.clearRect(0,0,t,n),f+=1,a.lineWidth=1;for(let e=0;e<s.length;e++){let t=s[e];for(let n=e+1;n<s.length;n++){let e=s[n],r=Math.hypot(t.x-e.x,t.y-e.y);if(r<170){let n=(1-r/170)*(t.hub||e.hub?.32:.18);a.strokeStyle=t.hub||e.hub?`rgba(52, 211, 153, ${n})`:`rgba(148, 163, 184, ${n})`,a.beginPath(),a.moveTo(t.x,t.y),a.lineTo(e.x,e.y),a.stroke()}}let n=Math.hypot(t.x-r.x,t.y-r.y);n<190&&(a.strokeStyle=`rgba(52, 211, 153, ${(1-n/190)*.45})`,a.beginPath(),a.moveTo(t.x,t.y),a.lineTo(r.x,r.y),a.stroke())}for(let e of s)if(e.hub){let t=(Math.sin(f*.03+e.phase)+1)/2;a.strokeStyle=`rgba(52, 211, 153, ${.15+t*.3})`,a.beginPath(),a.arc(e.x,e.y,7+t*5,0,Math.PI*2),a.stroke(),a.fillStyle=`rgba(52, 211, 153, 0.95)`,a.beginPath(),a.arc(e.x,e.y,3,0,Math.PI*2),a.fill()}else a.fillStyle=`rgba(148, 163, 184, 0.55)`,a.beginPath(),a.arc(e.x,e.y,1.6,0,Math.PI*2),a.fill();for(let e of c){let t=e.de.x+(e.vers.x-e.de.x)*e.t,n=e.de.y+(e.vers.y-e.de.y)*e.t,r=a.createRadialGradient(t,n,0,t,n,10);r.addColorStop(0,`rgba(167, 243, 208, 0.95)`),r.addColorStop(1,`rgba(52, 211, 153, 0)`),a.fillStyle=r,a.beginPath(),a.arc(t,n,10,0,Math.PI*2),a.fill()}},m=()=>{for(let e of s)e.x+=e.vx,e.y+=e.vy,(e.x<-20||e.x>t+20)&&(e.vx*=-1),(e.y<-20||e.y>n+20)&&(e.vy*=-1);for(let e=c.length-1;e>=0;e--){let t=c[e];if(t.t+=t.vitesse,t.t>=1){let n=Math.random()<.6?u(t.vers):[];n.length?(t.de=t.vers,t.vers=n[Math.floor(Math.random()*n.length)],t.t=0):c.splice(e,1)}}c.length<4&&Math.random()<.02&&d()},h=0,g=!0,_=()=>{m(),p(),h=requestAnimationFrame(_)},v=()=>{!h&&g&&!document.hidden&&!e&&(h=requestAnimationFrame(_))},y=()=>{cancelAnimationFrame(h),h=0};l(),p(),e||(new IntersectionObserver(([e])=>{g=e.isIntersecting,g?v():y()}).observe(i),document.addEventListener(`visibilitychange`,()=>document.hidden?y():v()),v());let b=0;addEventListener(`resize`,()=>{clearTimeout(b),b=window.setTimeout(()=>{l(),p()},200)})}</script>  <div class="fixed top-0 left-0 w-full h-1 z-50 bg-gray-800 print:hidden"> <div id="progress-bar" class="h-full bg-emerald-500 origin-left scale-x-0 transition-transform duration-100 ease-out"></div> </div> <header class="relative w-full h-[400px] overflow-hidden print:h-auto print:overflow-visible">  <div class="absolute inset-0 print:hidden"> <img data-astro-transition-scope="astro-fwkvbled-1" src="/images/hub/accueil-1500.webp" alt="" class="w-full h-full object-cover opacity-35 [mask-image:linear-gradient(to_bottom,black_30%,transparent)]"> <div class="absolute inset-0 bg-linear-to-r from-void/70 to-transparent [mask-image:linear-gradient(to_bottom,black_30%,transparent)]"></div> </div> <div class="absolute bottom-0 left-0 w-full max-w-4xl mx-auto px-6 pb-12 z-10 print:static print:px-0 print:pb-4"> <nav aria-label="Fil d'Ariane" class="font-mono text-sm mb-6"> <ol class="flex flex-wrap items-center gap-x-0.5 text-muted"> <li class="flex items-center"> <span class="text-glow mr-2 select-none" aria-hidden="true">$ cd</span> <a href="/" class="text-emerald-400 hover:text-white transition rounded-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500" aria-label="Accueil">~</a> </li> <li class="flex items-center"> <span class="px-0.5 text-white/30" aria-hidden="true">/</span> <a href="/#projects" class="text-emerald-400 hover:text-white transition rounded-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500"> realisations </a> </li><li class="flex items-center"> <span class="px-0.5 text-white/30" aria-hidden="true">/</span> <span class="text-gray-200" aria-current="page">hub-academy</span> </li> </ol> </nav> <div class="flex gap-2 mb-4"> <span class="px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-900/30 border border-emerald-500/20 rounded-full">
+#Développement web </span><span class="px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-900/30 border border-emerald-500/20 rounded-full">
+#Google Apps Script </span><span class="px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-900/30 border border-emerald-500/20 rounded-full">
+#Google Sheets </span><span class="px-3 py-1 text-xs font-bold text-emerald-300 bg-emerald-900/30 border border-emerald-500/20 rounded-full">
+#Gestion des droits </span> </div> <h1 data-astro-transition-scope="astro-5buac6qq-2" class="text-4xl md:text-5xl font-bold text-white mb-2 leading-tight md:leading-none"> Hub Academy : prototype de formation gamifiée </h1> <p class="text-gray-400 flex flex-wrap items-center gap-x-4 gap-y-1 mt-4 font-mono text-sm"> <span><span class="text-emerald-400">⏱</span> juil. 2026 → en cours</span> <span class="text-gray-500">
+lecture 1 min · dossier détaillé 9 min </span> </p> </div> </header> <main class="min-h-screen px-4 sm:px-6 py-12 relative"> <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-64 bg-emerald-500/5 blur-[120px] pointer-events-none z-0"></div> <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 relative z-10 print:block"> <aside class="hidden lg:block lg:w-1/4 print:hidden"> <div class="sticky top-24 bg-[#0f0f0f]/80 backdrop-blur-md border border-white/10 p-6 rounded-3xl shadow-xl"> <h2 class="text-white font-bold mb-4 flex items-center gap-2 uppercase tracking-wider text-sm"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-500"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path><path d="M12 3v6"></path></svg>
+Sommaire
+</h2> <ul class="space-y-3 border-l border-white/10 pl-4"> <li> <a href="#lessentiel" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> L’essentiel </a> </li><li> <a href="#contexte-du-projet" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Contexte du projet </a> </li><li> <a href="#environnement-technologique" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Environnement Technologique </a> </li><li> <a href="#actions-réalisées" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Actions réalisées </a> </li><li> <a href="#difficultés-rencontrées--solutions" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Difficultés rencontrées &amp; Solutions </a> </li><li> <a href="#competences-bts-sio" class="block transition-colors hover:text-emerald-400 text-sm text-gray-300 font-medium"> Compétences BTS SIO </a> </li> </ul> </div> </aside> <article class="w-full lg:w-3/4 print:w-full prose-content relative card p-5 sm:p-8 md:p-12 surface border border-white/10 rounded-3xl shadow-2xl"> <div class="en-bref">
+<p><span>Contexte</span>Les collaborateurs connaissent mal les fonctions avancées et les nouveautés de Google Workspace, et une documentation classique est peu lue.</p>
+<p><span>Mon rôle</span>Seul sur le projet : conception, développement front-end et back-end, hébergement, modèle de données et gestion des droits.</p>
+<p><span>Statut</span>Prototype avancé, pas un produit fini. Il sera présenté à ma hiérarchie, qui décidera s'il mérite d'être industrialisé et déployé.</p>
+</div>
+<h2 id="lessentiel">L’essentiel</h2>
+<ul>
+<li><strong>Le besoin :</strong> les astuces Google Workspace existent, mais personne ne va les chercher dans une documentation. J’ai voulu un lieu où l’on a envie de revenir.</li>
+<li><strong>Une architecture sans serveur ni budget :</strong> la web app est hébergée sur Google Apps Script, et une Google Sheet sert de base de données.</li>
+<li><strong>Un contenu géré sans code :</strong> un éditeur intégré au site écrit directement dans la Sheet.</li>
+<li><strong>Des droits contrôlés :</strong> quatre rôles, vérifiés côté serveur ; le code HTML/JS est réservé aux admins, pour éviter l’injection de script.</li>
+<li><strong>Un projet piloté :</strong> note de cadrage, réseau PERT, diagramme de Gantt et suivi prévu / réalisé jusqu’à la présentation à ma hiérarchie.</li>
+</ul>
+<figure class="capture">
+<img src="/images/hub/accueil-1500.webp" srcset="/images/hub/accueil-800.webp 800w, /images/hub/accueil-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Page d'accueil du Hub : quête du jour, mur d'astuces, progression du joueur" loading="lazy" decoding="async" />
+<figcaption>L'accueil du prototype : formation à la une, mur d'astuces, progression du joueur (titres de test floutés).</figcaption>
+</figure>
+<figure class="capture">
+<img src="/images/hub/gantt.svg" alt="Diagramme de Gantt du Hub Academy de juillet à décembre 2026" loading="lazy" decoding="async" />
+<figcaption>Le planning : réalisé en plein, prévisionnel hachuré, jusqu'à l'échéance de présentation.</figcaption>
+</figure>
+<details class="dossier">
+<summary>Dossier détaillé : architecture, captures, gestion de projet, limites</summary>
+<h2 id="contexte-du-projet">Contexte du projet</h2>
+<p>Ce projet prolonge un travail de formation des collaborateurs aux outils Google Workspace. Le constat de départ : les astuces utiles existent, mais personne ne va les chercher dans une documentation. L’idée a donc été de créer <strong>un lieu où l’on a envie de revenir</strong> : un hub qui présente les astuces méconnues et les nouveautés sous forme de cartes, avec une mécanique de jeu qui récompense la curiosité.</p>
+<p><strong>Objectifs :</strong></p>
+<ul>
+<li>rendre la découverte des outils ludique et régulière ;</li>
+<li>permettre à des non-développeurs d’ajouter et de modifier le contenu sans toucher au code ;</li>
+<li>n’utiliser que les outils déjà disponibles dans l’entreprise, donc <strong>aucun serveur ni budget supplémentaire</strong>.</li>
+</ul>
+<h2 id="environnement-technologique">Environnement Technologique</h2>
+<ul>
+<li><strong>Hébergement et back-end :</strong> Google Apps Script (web app servie par <code>doGet</code>)</li>
+<li><strong>Base de données :</strong> Google Sheets (onglets Joueurs, Astuces, Formations, Admin)</li>
+<li><strong>Front-end :</strong> HTML, CSS et JavaScript dans une page unique</li>
+<li><strong>Illustrations des cartes :</strong> une Gem Gemini dédiée, avec une charte de style et des planches de référence</li>
+<li><strong>Authentification :</strong> le compte Google Workspace de l’utilisateur</li>
+</ul>
+<h2 id="actions-réalisées">Actions réalisées</h2>
+<h3 id="1-une-architecture-sans-serveur">1. Une architecture sans serveur</h3>
+<p>La web app est entièrement hébergée sur <strong>Google Apps Script</strong> : une fonction <code>doGet</code> sert la page, et les fonctions côté serveur lisent et écrivent dans la <strong>Google Sheet</strong>, qui fait office de base de données. Ce choix évite tout serveur à administrer et s’appuie sur l’authentification Google déjà en place.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Navigateur ──▶ Apps Script (doGet) ──▶ Page HTML / CSS / JS</span></span>
+<span class="line"><span>     │                                        │</span></span>
+<span class="line"><span>     └──── appels serveur (google.script.run) ┘</span></span>
+<span class="line"><span>                        │</span></span>
+<span class="line"><span>                        ▼</span></span>
+<span class="line"><span>                  Google Sheet</span></span>
+<span class="line"><span>     Joueurs · Astuces · Formations · Admin</span></span></code></pre>
+<figure class="capture">
+<img src="/images/hub/sheet.webp" alt="Onglet Joueurs de la Google Sheet : rôle, niveau, XP, série de jours" loading="lazy" decoding="async" />
+<figcaption>L'onglet Joueurs de la Google Sheet, qui sert de base de données : rôle, niveau, XP, série de jours, boosters. Adresse e-mail et données de sauvegarde floutées.</figcaption>
+</figure>
+<p>Chaque joueur occupe une ligne de l’onglet <strong>Joueurs</strong> :</p>
+<table>
+<thead>
+<tr>
+<th>Colonne</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A · Email</td>
+<td>Identifiant du joueur : l’adresse de son compte Google, reconnue automatiquement à la connexion</td>
+</tr>
+<tr>
+<td>B · Nom complet</td>
+<td>Prénom affiché dans le site</td>
+</tr>
+<tr>
+<td>C · Rôle</td>
+<td>Lecteur, Contributeur, Admin ou Superadmin : c’est cette case que le serveur vérifie avant chaque action</td>
+</tr>
+<tr>
+<td>D · Niveau</td>
+<td>Calculé à partir de l’XP : un niveau tous les 100 XP</td>
+</tr>
+<tr>
+<td>E · XP Total</td>
+<td>Points gagnés en appliquant les astuces</td>
+</tr>
+<tr>
+<td>F · Jours consécutifs</td>
+<td>Série de jours de visite d’affilée</td>
+</tr>
+<tr>
+<td>G · Dernière activité</td>
+<td>Date de la dernière activité, qui permet de prolonger ou de remettre à zéro la série de jours</td>
+</tr>
+<tr>
+<td>H · Statut</td>
+<td>Compte actif ou non</td>
+</tr>
+<tr>
+<td>I · Sauvegarde (JSON)</td>
+<td>Sauvegarde de la progression au format JSON : astuces lues, cartes possédées… (floutée)</td>
+</tr>
+<tr>
+<td>J · Boosters</td>
+<td>Paquets de cartes gagnés et pas encore ouverts : un par niveau franchi</td>
+</tr>
+<tr>
+<td>K · Poussière</td>
+<td>Monnaie obtenue en recyclant les cartes en double (Commune 5, Peu commune 10, Rare 25, Épique 100), qui sert à fabriquer une carte manquante</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-un-contenu-piloté-sans-code">2. Un contenu piloté sans code</h3>
+<p>Le contenu n’est pas écrit en dur dans le code : <strong>chaque carte est une ligne de la Sheet</strong>. Une carte se compose de champs fixes (titre, catégorie, rareté…) et de zones empilables : texte, image, ou bloc de code HTML/CSS/JS pour les démonstrations interactives. Un <strong>éditeur intégré au site</strong> écrit directement dans la Sheet : on n’a jamais besoin de rouvrir Apps Script ni la feuille de calcul pour gérer le contenu.</p>
+<figure class="capture">
+<img src="/images/hub/editeur-1500.webp" srcset="/images/hub/editeur-800.webp 800w, /images/hub/editeur-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Formulaire « Ajouter une formation » de l'éditeur intégré" loading="lazy" decoding="async" />
+<figcaption>L'éditeur intégré : ajouter une formation ou une astuce se fait depuis le site, qui écrit directement dans la Sheet.</figcaption>
+</figure>
+<h3 id="3-une-gestion-des-droits-côté-serveur">3. Une gestion des droits côté serveur</h3>
+<p>Quatre rôles ont été définis, et <strong>chaque droit est vérifié côté serveur</strong>, jamais seulement dans l’interface :</p>
+<table>
+<thead>
+<tr>
+<th>Rôle</th>
+<th>Ce qu’il peut faire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lecteur</td>
+<td>Consulter, jouer, collectionner</td>
+</tr>
+<tr>
+<td>Contributeur</td>
+<td>Proposer et éditer des astuces</td>
+</tr>
+<tr>
+<td>Admin</td>
+<td>Utiliser la zone de code HTML/CSS/JS</td>
+</tr>
+<tr>
+<td>Superadmin</td>
+<td>Gérer les permissions des autres utilisateurs</td>
+</tr>
+</tbody>
+</table>
+<p>La zone de code est réservée aux admins pour une raison de sécurité : autoriser n’importe qui à publier du JavaScript reviendrait à ouvrir la porte à l’injection de code dans la page des autres utilisateurs (XSS).</p>
+<figure class="capture">
+<img src="/images/hub/admin-1500.webp" srcset="/images/hub/admin-800.webp 800w, /images/hub/admin-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Panneau d'administration : liste des membres et choix du rôle" loading="lazy" decoding="async" />
+<figcaption>Le panneau d'administration réservé au superadmin : chaque membre reçoit un rôle, vérifié ensuite côté serveur. Adresses e-mail floutées.</figcaption>
+</figure>
+<h3 id="4-la-gamification--la--hub-academy-">4. La gamification : la « Hub Academy »</h3>
+<figure class="capture">
+<img src="/images/hub/accueil-1500.webp" srcset="/images/hub/accueil-800.webp 800w, /images/hub/accueil-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Page d'accueil du Hub : quête du jour, mur d'astuces, progression du joueur" loading="lazy" decoding="async" />
+<figcaption>L'accueil : la formation à la une, le mur d'astuces à valider, la progression (niveau, XP, série) et la dernière carte débloquée. Titres de test floutés.</figcaption>
+</figure>
+<ul>
+<li><strong>XP et niveaux</strong> (un niveau tous les 100 XP), <strong>séries de jours</strong> consécutifs ;</li>
+<li><strong>cartes à collectionner</strong> avec quatre raretés (Commune, Rare, Épique, Légendaire) ;</li>
+<li>un univers de cartes inspiré de l’histoire de l’entreprise, avec un « Le saviez-vous ? » au verso de chaque carte ;</li>
+<li>les cadres des cartes sont <strong>dessinés en code</strong> ; l’IA ne produit que l’illustration, selon une charte de style fixe ;</li>
+<li>les cartes Épiques et Légendaires sont « vivantes » : inclinaison 3D et reflet qui suit la souris.</li>
+</ul>
+<figure class="capture">
+<img src="/images/hub/booster-paquet-1500.webp" srcset="/images/hub/booster-paquet-800.webp 800w, /images/hub/booster-paquet-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Booster de la série L'Essor avant ouverture" loading="lazy" decoding="async" />
+<figcaption>Prototype de l'ouverture d'un booster : on déchire le paquet en glissant le doigt le long du pointillé.</figcaption>
+</figure>
+<figure class="capture">
+<img src="/images/hub/booster-epique-1500.webp" srcset="/images/hub/booster-epique-800.webp 800w, /images/hub/booster-epique-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Carte épique « Les Trois Fondateurs » révélée" loading="lazy" decoding="async" />
+<figcaption>Une carte Épique révélée : cadre doré, halo, et effet de profondeur quand on la bouge.</figcaption>
+</figure>
+<figure class="capture">
+<img src="/images/hub/booster-recap-1500.webp" srcset="/images/hub/booster-recap-800.webp 800w, /images/hub/booster-recap-1500.webp 1500w" sizes="(min-width: 1024px) 768px, 100vw" alt="Récapitulatif d'un booster : trois cartes, nouvelles ou doublons" loading="lazy" decoding="async" />
+<figcaption>Le récapitulatif : chaque carte est marquée « Nouvelle » ou « Doublon », selon la collection du joueur.</figcaption>
+</figure>
+<h3 id="5-une-direction-artistique-choisie-pas-subie">5. Une direction artistique choisie, pas subie</h3>
+<p>Une dizaine de pistes graphiques ont été comparées avant de retenir une direction « Arcade » : thème sombre indigo, or pour tout ce qui touche au jeu, et couleurs des applications Google pour l’information.</p>
+<h3 id="6-prochaine-étape--la-présentation-à-ma-hiérarchie">6. Prochaine étape : la présentation à ma hiérarchie</h3>
+<p>Le Hub n’est pas encore ouvert aux collaborateurs. Une fois la V1 terminée, je la présenterai à mes responsables : c’est à eux de décider s’il est déployé, et s’il doit continuer d’évoluer. L’architecture a été pensée pour cette décision : rien à installer, aucun coût, et un contenu que l’équipe peut reprendre sans moi.</p>
+<h3 id="7-gestion-de-projet--planification-et-suivi">7. Gestion de projet : planification et suivi</h3>
+<p><strong>Note de cadrage</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objectif</strong></td>
+<td>Faire découvrir les astuces et les nouveautés Google Workspace de façon ludique et régulière</td>
+</tr>
+<tr>
+<td><strong>Périmètre de la V1</strong></td>
+<td>Mur d’astuces, éditeur intégré, rôles et administration, progression (XP, niveaux, séries), cartes à collectionner et boosters</td>
+</tr>
+<tr>
+<td><strong>Hors périmètre</strong></td>
+<td>Déploiement à l’ensemble des collaborateurs, statistiques d’usage</td>
+</tr>
+<tr>
+<td><strong>Contraintes</strong></td>
+<td>Aucun budget, aucun serveur à administrer, réalisé seul en parallèle de l’alternance</td>
+</tr>
+<tr>
+<td><strong>Livrables</strong></td>
+<td>La web app, la base Google Sheets, l’univers des cartes, la présentation à ma hiérarchie</td>
+</tr>
+<tr>
+<td><strong>Critère de réussite</strong></td>
+<td>Le prototype permet à ma hiérarchie de décider, en connaissance de cause, d’un déploiement ou non</td>
+</tr>
+</tbody>
+</table>
+<p>Le projet a d’abord avancé sans planning formel, tâche après tâche. Pour préparer la présentation à ma hiérarchie, je l’ai <strong>découpé en tâches avec leurs dépendances</strong> à partir des dates réelles de fin, puis planifié la suite jusqu’à l’échéance.</p>
+<figure class="capture">
+<img src="/images/hub/pert.svg" alt="Réseau PERT du Hub Academy : douze tâches, leurs dépendances et le chemin critique" loading="lazy" decoding="async" />
+<figcaption>Réseau PERT : une tâche démarre quand celles dont elle dépend sont finies. Le chemin critique (en vert) passe par la direction artistique, l'univers des cartes et les boosters : c'est lui qui a fixé le début des tests.</figcaption>
+</figure>
+<figure class="capture">
+<img src="/images/hub/gantt.svg" alt="Diagramme de Gantt du Hub Academy de juillet à décembre 2026" loading="lazy" decoding="async" />
+<figcaption>Diagramme de Gantt : le réalisé (plein) et le prévisionnel (hachuré), avec la date du jour et l'échéance de présentation.</figcaption>
+</figure>
+<p><strong>Suivi prévu / réalisé</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tâche</th>
+<th>Prévu</th>
+<th>Réalisé</th>
+<th>Écart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cadrage → boosters et collection (T1 à T9)</td>
+<td>Pas de planning initial</td>
+<td>Terminé le 23/09</td>
+<td>Non mesurable : c’est ce constat qui a motivé le planning</td>
+</tr>
+<tr>
+<td>Tests et corrections (T10)</td>
+<td>15/11</td>
+<td>En cours</td>
+<td>À suivre</td>
+</tr>
+<tr>
+<td>Préparation de la présentation (T11)</td>
+<td>27/11</td>
+<td>—</td>
+<td>À suivre</td>
+</tr>
+<tr>
+<td>Présentation à la hiérarchie (T12)</td>
+<td>27/11, au plus tard le 04/12</td>
+<td>—</td>
+<td>Une semaine de marge</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ce que j’en retiens :</strong> le chemin critique montre que l’univers des cartes et les illustrations ont pesé plus lourd que le développement lui-même (rôles et administration terminés dès le 19/08). Pour la suite, chaque tâche a une date prévue : l’écart se mesurera à chaque étape, et la semaine de marge avant l’échéance absorbe un retard sur les tests.</p>
+<h3 id="8-un-prototype-pas-un-produit--ce-quil-faudrait-pour-aller-plus-loin">8. Un prototype, pas un produit : ce qu’il faudrait pour aller plus loin</h3>
+<p>J’ai mené ce projet seul, avec les moyens disponibles. Le résultat est un <strong>prototype avancé</strong>, fonctionnel de bout en bout, mais loin de ce que livrerait une équipe de développement. Le présenter honnêtement fait partie du travail :</p>
+<table>
+<thead>
+<tr>
+<th>Ce que fait le prototype</th>
+<th>Ce qu’exigerait un produit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tests manuels, au fil du développement</td>
+<td>Tests automatisés et recette par d’autres personnes que le développeur</td>
+</tr>
+<tr>
+<td>Un seul développeur, sans relecture du code</td>
+<td>Revue de code, versionnage partagé, déploiement contrôlé</td>
+</tr>
+<tr>
+<td>Rôles vérifiés côté serveur</td>
+<td>Audit de sécurité indépendant</td>
+</tr>
+<tr>
+<td>Données des joueurs dans une Sheet (e-mail, progression)</td>
+<td>Analyse RGPD : données strictement nécessaires, durée de conservation, information des utilisateurs</td>
+</tr>
+<tr>
+<td>Apps Script, gratuit et déjà disponible</td>
+<td>Validation de la tenue en charge si tous les collaborateurs l’utilisent (quotas Apps Script)</td>
+</tr>
+<tr>
+<td>Contenu et maintenance assurés par moi</td>
+<td>Une équipe ou un référent désigné pour faire vivre le contenu</td>
+</tr>
+</tbody>
+</table>
+<p>C’est précisément l’objet de la présentation à ma hiérarchie : montrer ce que le prototype prouve, et ce qu’il coûterait d’en faire un outil officiel.</p>
+<h2 id="difficultés-rencontrées--solutions">Difficultés rencontrées &amp; Solutions</h2>
+<table>
+<thead>
+<tr>
+<th>Problème</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Faire évoluer le contenu sans dépendre d’un développeur</td>
+<td>Contenu en Sheet + éditeur intégré au site : zéro modification du code pour ajouter une astuce</td>
+</tr>
+<tr>
+<td>Ouvrir la contribution sans exposer le site</td>
+<td>Rôles vérifiés côté serveur ; zone de code réservée aux admins (risque XSS)</td>
+</tr>
+<tr>
+<td>L’IA écrit du texte illisible dans les images</td>
+<td>Aucune lettre dans les illustrations : noms, cadres et logos sont ajoutés en code par-dessus</td>
+</tr>
+<tr>
+<td>Le style des illustrations dérivait d’une carte à l’autre</td>
+<td>Gem dédiée avec charte de style et planches de référence codées (« cadrage C8, lumière L2 »)</td>
+</tr>
+</tbody>
+</table>
+</details>
+ <section class="competences-article"> <h2 id="competences-bts-sio">Compétences BTS SIO</h2> <div class="ligne-e5"> <p class="ligne-e5-titre"> <span>Tableau E5</span> Réalisations en milieu professionnel en cours de seconde année · juil. 2026 → en cours </p> <ul> <li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Mettre en place et vérifier les niveaux d&#39;habilitation associés à un service</strong> <span class="ligne-e5-comp"> (Gérer le patrimoine informatique)</span> <br> Quatre rôles (lecteur, contributeur, admin, superadmin) vérifiés côté serveur </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Participer à l&#39;évolution d&#39;un site Web exploitant les données de l&#39;organisation</strong> <span class="ligne-e5-comp"> (Développer la présence en ligne de l&#39;organisation)</span> <br> Site web dont tout le contenu provient des données de l&#39;organisation (Google Sheets) </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Analyser les objectifs et les modalités d&#39;organisation d&#39;un projet</strong> <span class="ligne-e5-comp"> (Travailler en mode projet)</span> <br> Note de cadrage : objectif, périmètre de la V1, contraintes, livrables et critère de réussite </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Planifier les activités</strong> <span class="ligne-e5-comp"> (Travailler en mode projet)</span> <br> Découpage en douze tâches avec dépendances, réseau PERT, chemin critique et diagramme de Gantt </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Évaluer les indicateurs de suivi d&#39;un projet et analyser les écarts</strong> <span class="ligne-e5-comp"> (Travailler en mode projet)</span> <br> Suivi prévu / réalisé jusqu&#39;à la présentation, analyse du chemin critique et marge avant l&#39;échéance </span> </li><li> <span class="ligne-e5-id" aria-hidden="true">✓</span> <span> <strong>Mettre en place son environnement d&#39;apprentissage personnel</strong> <span class="ligne-e5-comp"> (Organiser son développement professionnel)</span> <br> Apprentissage d&#39;Apps Script et des architectures sans serveur </span> </li> </ul> </div> <div class="ligne-e5"> <p class="ligne-e5-titre"><span>Hors E5</span>Blocs 2 et 3</p> <ul> <li> <span class="ligne-e5-id">Bloc 3</span> <span>Garantir la disponibilité, l&#39;intégrité et la confidentialité des services et des données face à des cyberattaques</span> </li> </ul> </div> <p><a href="/competences">Voir le tableau de synthèse complet →</a></p> </section> </article> </div> <div class="max-w-4xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 print:hidden"> <a href="/projects/portfolio" class="group card p-6 surface border border-white/10 rounded-2xl shadow-lg transition-colors flex flex-col items-start text-left cursor-pointer"> <span class="text-xs text-muted uppercase tracking-wider mb-2 group-hover:text-emerald-400 transition-colors">
+← Projet Précédent
+</span> <span class="text-white font-bold text-lg line-clamp-2 group-hover:text-emerald-300 transition-colors"> Portfolio professionnel : conception et maintenance </span> </a> <a href="/projects/pipeline-affiches-ia" class="group card p-6 surface border border-white/10 rounded-2xl shadow-lg transition-colors flex flex-col items-end text-right cursor-pointer"> <span class="text-xs text-muted uppercase tracking-wider mb-2 group-hover:text-emerald-400 transition-colors">
+Projet Suivant →
+</span> <span class="text-white font-bold text-lg line-clamp-2 group-hover:text-emerald-300 transition-colors"> Pipeline IA de production d&#39;affiches </span> </a> </div> </main>   <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 print:hidden" aria-label="Navigation principale"> <div class="flex items-center gap-1 sm:gap-2 px-1.5 sm:px-2 py-1.5 sm:py-2 rounded-full bg-[#13151a]/85 backdrop-blur-md border border-[#2d3039] shadow-2xl">  <button type="button" data-ouvrir-palette aria-label="Ouvrir la palette de commandes (Ctrl+K)" title="Palette de commandes — Ctrl+K" class="group/pal relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-emerald-400 hover:bg-emerald-500/10 transition focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500"> <span class="absolute inset-1.5 rounded-full bg-emerald-500/10 animate-pulse" aria-hidden="true"></span> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="relative" aria-hidden="true"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg> <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/pal:opacity-100 group-focus-visible/pal:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl">
+Palette · Ctrl K
+</span> </button> <div class="flex items-center gap-1"> <div class="h-4 w-px bg-white/10 mx-1"></div> <a href="/" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-gray-400 hover:text-white hover:bg-white/10" aria-label="Home" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z M9 22V12h6v10"></path> </svg>   <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Home </span> </a><a href="/#projects" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-emerald-400 bg-emerald-500/10" aria-label="Projets" aria-current="page" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z"></path> </svg>  <span class="absolute -bottom-0.5 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-emerald-400" aria-hidden="true"></span> <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Projets </span> </a><a href="/competences" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-gray-400 hover:text-white hover:bg-white/10" aria-label="Compétences" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M22 10v6M2 10l10-5 10 5-10 5z M6 12v5c3 3 9 3 12 0v-5"></path> </svg>   <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Compétences </span> </a><a href="/veille" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-gray-400 hover:text-white hover:bg-white/10" aria-label="Veille" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M4 11a9 9 0 0 1 9 9 M4 4a16 16 0 0 1 16 16 M5 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path> </svg>   <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Veille </span> </a><a href="/mon_cv.pdf" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white gap-1.5 px-3 border border-emerald-500/30 text-gray-400 hover:text-white hover:bg-white/10" aria-label="CV" target="_blank" rel="noopener"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6 M16 13H8 M16 17H8 M10 9H8"></path> </svg> <span class="text-xs font-bold text-emerald-300" aria-hidden="true">CV</span>  <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> CV </span> </a><a href="mailto:johan.danais@gmail.com" class="relative flex items-center justify-center h-10 rounded-full transition-colors duration-200 shrink-0 group/icon focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:text-white w-10 text-gray-400 hover:text-white hover:bg-white/10" aria-label="Mail" target="_self"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover/icon:scale-110"> <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6"></path> </svg>   <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-[#13151a] border border-[#2d3039] rounded-sm text-[10px] text-white opacity-0 group-hover/icon:opacity-100 group-focus-visible/icon:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-xl"> Mail </span> </a> </div> </div> </nav> <dialog data-astro-transition-persist="palette" id="palette" aria-label="Palette de commandes" class="palette m-auto mt-[12vh] w-[min(640px,calc(100vw-2rem))] p-0 rounded-2xl border border-emerald-500/30 text-white shadow-[0_0_60px_rgba(16,185,129,0.15)] backdrop:bg-black/60 backdrop:backdrop-blur-sm"> <div class="flex items-center gap-2 px-4 py-2.5 border-b border-white/5 bg-white/[0.02]"> <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span> <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span> <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span> <span class="ml-3 text-[11px] font-mono text-muted">johan@lybernet: ~ — palette</span> <kbd class="ml-auto text-[10px] font-mono text-muted border border-white/10 rounded px-1.5 py-0.5">Échap</kbd> </div> <label class="flex items-center gap-3 px-5 py-4 border-b border-white/5 font-mono"> <span class="text-glow select-none" aria-hidden="true">$</span> <input id="palette-saisie" type="text" autocomplete="off" spellcheck="false" placeholder="Aller à une page ou chercher un mot (veille, GPO, Proxmox…)" class="w-full bg-transparent outline-hidden text-base placeholder:text-muted" role="combobox" aria-expanded="true" aria-controls="palette-liste" aria-autocomplete="list"> </label> <ul id="palette-liste" role="listbox" class="max-h-[50vh] overflow-y-auto p-2"> <li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Navigation" data-href="/" data-recherche="Accueil cd ~ home accueil"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Accueil</span> <span class="text-[11px] font-mono text-muted truncate">cd ~</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Navigation</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Navigation" data-href="/#projects" data-recherche="Réalisations professionnelles cd ~/realisations projets missions"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Réalisations professionnelles</span> <span class="text-[11px] font-mono text-muted truncate">cd ~/realisations</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Navigation</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Navigation" data-href="/competences" data-recherche="Compétences — référentiel BTS SIO cd ~/competences bts sio blocs e4 e5 referentiel"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Compétences — référentiel BTS SIO</span> <span class="text-[11px] font-mono text-muted truncate">cd ~/competences</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Navigation</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Navigation" data-href="/veille" data-recherche="Veille technologique cd ~/veille cert-fr anssi securite"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Veille technologique</span> <span class="text-[11px] font-mono text-muted truncate">cd ~/veille</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Navigation</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/veille-freshrss" data-recherche="Veille auto-hébergée : FreshRSS et ma page de lecture cat veille-freshrss.md Homelab Docker Veille Supervision"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Veille auto-hébergée : FreshRSS et ma page de lecture</span> <span class="text-[11px] font-mono text-muted truncate">cat veille-freshrss.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/support-exploitation" data-recherche="Support N1/N2 et exploitation du parc informatique cat support-exploitation.md Exploitation Support utilisateur Active Directory Windows 11"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Support N1/N2 et exploitation du parc informatique</span> <span class="text-[11px] font-mono text-muted truncate">cat support-exploitation.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/pipeline-affiches-ia" data-recherche="Pipeline IA de production d'affiches cat pipeline-affiches-ia.md IA générative Gemini Automatisation Gestion de projet"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Pipeline IA de production d&#39;affiches</span> <span class="text-[11px] font-mono text-muted truncate">cat pipeline-affiches-ia.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/hub-academy" data-recherche="Hub Academy : prototype de formation gamifiée cat hub-academy.md Développement web Google Apps Script Google Sheets Gestion des droits"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Hub Academy : prototype de formation gamifiée</span> <span class="text-[11px] font-mono text-muted truncate">cat hub-academy.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/portfolio" data-recherche="Portfolio professionnel : conception et maintenance cat portfolio.md Développement professionnel Astro Référencement Veille"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Portfolio professionnel : conception et maintenance</span> <span class="text-[11px] font-mono text-muted truncate">cat portfolio.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Réalisations" data-href="/projects/cyber-sensibilisation" data-recherche="Sensibilisation Cyber &amp; Hygiène Numérique cat cyber-sensibilisation.md Hygiène Numérique Cybersécurité Support Utilisateur Communication"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Sensibilisation Cyber &amp; Hygiène Numérique</span> <span class="text-[11px] font-mono text-muted truncate">cat cyber-sensibilisation.md</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Réalisations</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="/mon_cv.pdf" data-externe="1" data-recherche="Ouvrir mon CV (PDF) open mon_cv.pdf cv curriculum telecharger"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Ouvrir mon CV (PDF)</span> <span class="text-[11px] font-mono text-muted truncate">open mon_cv.pdf</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="johan.danais@gmail.com" data-action="copier" data-recherche="Copier mon adresse e-mail copy johan.danais@gmail.com contact email courriel mail adresse copier"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Copier mon adresse e-mail</span> <span class="text-[11px] font-mono text-muted truncate">copy johan.danais@gmail.com</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="mailto:johan.danais@gmail.com" data-externe="1" data-recherche="M'écrire un mail mail johan.danais contact email courriel"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">M&#39;écrire un mail</span> <span class="text-[11px] font-mono text-muted truncate">mail johan.danais</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="https://www.linkedin.com/in/johan-danais-65a315198/" data-externe="1" data-recherche="Profil LinkedIn open linkedin reseau social"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Profil LinkedIn</span> <span class="text-[11px] font-mono text-muted truncate">open linkedin</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li><li role="option" aria-selected="false" class="palette-entree flex items-center justify-between gap-4 px-3 py-2.5 rounded-lg cursor-pointer" data-groupe="Actions" data-href="https://github.com/merynger" data-externe="1" data-recherche="Profil GitHub open github code depot"> <span class="flex flex-col min-w-0"> <span class="text-sm text-gray-100 truncate">Profil GitHub</span> <span class="text-[11px] font-mono text-muted truncate">open github</span> </span> <span class="text-[10px] font-mono uppercase tracking-wider text-muted shrink-0">Actions</span> </li> </ul> <p id="palette-vide" class="hidden px-5 py-6 text-sm font-mono text-muted">
+command not found — essayez « veille », « cv » ou un mot comme « Windows 11 ».
+</p> <div class="flex items-center gap-4 px-5 py-2.5 border-t border-white/5 text-[11px] font-mono text-muted"> <span><kbd class="text-gray-300">↑ ↓</kbd> choisir</span> <span><kbd class="text-gray-300">Entrée</kbd> ouvrir</span> <span id="palette-statut" class="text-glow" role="status" aria-live="polite"></span> <span class="ml-auto hidden sm:inline"><kbd class="text-gray-300">Ctrl K</kbd> ouvrir / fermer</span> </div> </dialog><script type="module" src="/_astro/CommandPalette.astro_astro_type_script_index_0_lang.B2F2nOL0.js"></script> </body> </html><script type="module">window.addEventListener(`scroll`,()=>{let e=(document.body.scrollTop||document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight),t=document.getElementById(`progress-bar`);t&&(t.style.transform=`scaleX(`+e+`)`)});function e(){document.querySelectorAll(`.card`).forEach(e=>{e.addEventListener(`mousemove`,t=>{let n=t,r=e.getBoundingClientRect(),i=n.clientX-r.left,a=n.clientY-r.top;e.style.setProperty(`--mouse-x`,`${i}px`),e.style.setProperty(`--mouse-y`,`${a}px`)})})}function t(){let e=document.getElementById(`carousel-container`),t=document.getElementById(`carousel-track`),n=document.getElementById(`prev-btn`),r=document.getElementById(`next-btn`);if(!e||!t||!n||!r)return;let i=t.querySelectorAll(`.flex-none`),a=0,o=i.length;function s(){t.style.transform=`translateX(-${a*100}%)`,n.disabled=a===0,r.disabled=a===o-1}n.addEventListener(`click`,()=>{a>0&&(a--,s())}),r.addEventListener(`click`,()=>{a<o-1&&(a++,s())}),s()}function n(){let e=e=>{let t=(e?document.getElementById(decodeURIComponent(e.slice(1))):null)?.closest(`details`);t&&!t.open&&(t.open=!0)};document.querySelectorAll(`a[href^="#"]`).forEach(t=>t.addEventListener(`click`,()=>e(t.hash))),e(location.hash)}document.addEventListener(`astro:page-load`,()=>{e(),t(),n()}),e(),t();var r=[];window.addEventListener(`beforeprint`,()=>{r=[...document.querySelectorAll(`details.dossier:not([open])`)],r.forEach(e=>e.open=!0)}),window.addEventListener(`afterprint`,()=>{r.forEach(e=>e.open=!1),r=[]});</script>

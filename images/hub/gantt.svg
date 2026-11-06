@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 558" width="960" height="558">
+<rect width="100%" height="100%" rx="18" fill="#0b0f0e"/>
+<defs><pattern id="h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#141a18"/><line x1="0" y1="0" x2="0" y2="6" stroke="#8b95a5" stroke-width="2"/></pattern><pattern id="ha" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2a2410"/><line x1="0" y1="0" x2="0" y2="6" stroke="#fbbf24" stroke-width="2"/></pattern></defs>
+<text x="24" y="34" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" fill="#e5e7eb" font-weight="700" text-anchor="start">Diagramme de Gantt — Hub Academy</text>
+<text x="24" y="56" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" fill="#8b95a5" font-weight="400" text-anchor="start">Barre : de la fin des tâches prérequises à la fin de la tâche. Hachuré : prévisionnel.</text>
+<line x1="322.5" y1="78" x2="322.5" y2="518" stroke="#1f2937"/>
+<text x="326.463768115942" y="74" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" fill="#8b95a5" font-weight="400" text-anchor="start">août</text>
+<line x1="466.2" y1="78" x2="466.2" y2="518" stroke="#1f2937"/>
+<text x="470.231884057971" y="74" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" fill="#8b95a5" font-weight="400" text-anchor="start">sept.</text>
+<line x1="605.4" y1="78" x2="605.4" y2="518" stroke="#1f2937"/>
+<text x="609.3623188405797" y="74" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" fill="#8b95a5" font-weight="400" text-anchor="start">oct.</text>
+<line x1="749.1" y1="78" x2="749.1" y2="518" stroke="#1f2937"/>
+<text x="753.1304347826087" y="74" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" fill="#8b95a5" font-weight="400" text-anchor="start">nov.</text>
+<line x1="888.3" y1="78" x2="888.3" y2="518" stroke="#1f2937"/>
+<text x="892.2608695652174" y="74" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" fill="#8b95a5" font-weight="400" text-anchor="start">déc.</text>
+<text x="24" y="111" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#e5e7eb" font-weight="600" text-anchor="start">T1 · Cadrage et architecture</text>
+<path d="M308.5507246376812 100 L315.5507246376812 107 L308.5507246376812 114 L301.5507246376812 107z" fill="#34d399"/>
+<text x="318.5507246376812" y="111" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">29/07</text>
+<text x="24" y="145" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#e5e7eb" font-weight="600" text-anchor="start">T2 · Direction artistique</text>
+<rect x="308.6" y="133" width="4.6" height="16" rx="4" fill="#34d399" opacity="1"/>
+<text x="323.18840579710144" y="145" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">30/07</text>
+<text x="24" y="179" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="start">T3 · Modèle de données</text>
+<rect x="308.6" y="167" width="88.1" height="16" rx="4" fill="#34d399" opacity="0.7"/>
+<text x="406.66666666666663" y="179" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">17/08</text>
+<text x="24" y="213" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="start">T4 · Interface et éditeur</text>
+<rect x="396.7" y="201" width="4.6" height="16" rx="4" fill="#34d399" opacity="0.7"/>
+<text x="411.30434782608694" y="213" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">18/08</text>
+<text x="24" y="247" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="start">T5 · Rôles et administration</text>
+<rect x="401.3" y="235" width="4.6" height="16" rx="4" fill="#34d399" opacity="0.7"/>
+<text x="415.94202898550725" y="247" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">19/08</text>
+<text x="24" y="281" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="start">T6 · Illustrations des cartes</text>
+<rect x="313.2" y="269" width="218.0" height="16" rx="4" fill="#34d399" opacity="0.7"/>
+<text x="541.159420289855" y="281" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">15/09</text>
+<text x="24" y="315" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#cbd5e1" font-weight="400" text-anchor="start">T7 · Gamification</text>
+<rect x="401.3" y="303" width="125.2" height="16" rx="4" fill="#34d399" opacity="0.7"/>
+<text x="536.5217391304348" y="315" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">14/09</text>
+<text x="24" y="349" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#e5e7eb" font-weight="600" text-anchor="start">T8 · Univers des cartes</text>
+<rect x="313.2" y="337" width="245.8" height="16" rx="4" fill="#34d399" opacity="1"/>
+<text x="568.9855072463768" y="349" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">21/09</text>
+<text x="24" y="383" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#e5e7eb" font-weight="600" text-anchor="start">T9 · Boosters et collection</text>
+<rect x="559.0" y="371" width="9.3" height="16" rx="4" fill="#34d399" opacity="1"/>
+<text x="578.2608695652174" y="383" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">23/09</text>
+<text x="24" y="417" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#e5e7eb" font-weight="600" text-anchor="start">T10 · Tests et corrections</text>
+<rect x="568.3" y="405" width="41.7" height="16" rx="4" fill="#fbbf24"/>
+<rect x="610.0" y="405" width="204.1" height="16" rx="4" fill="url(#ha)" stroke="#fbbf24" stroke-width="1"/>
+<text x="824.0579710144928" y="417" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">15/11</text>
+<text x="24" y="451" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#e5e7eb" font-weight="600" text-anchor="start">T11 · Préparation présentation</text>
+<rect x="814.1" y="439" width="55.7" height="16" rx="4" fill="url(#h)" stroke="#8b95a5" stroke-width="1"/>
+<text x="879.7101449275362" y="451" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">27/11</text>
+<text x="24" y="485" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" fill="#e5e7eb" font-weight="600" text-anchor="start">T12 · Présentation hiérarchie</text>
+<path d="M869.7101449275362 474 L876.7101449275362 481 L869.7101449275362 488 L862.7101449275362 481z" fill="#8b95a5"/>
+<text x="879.7101449275362" y="485" font-family="ui-monospace, monospace" font-size="10.5" fill="#8b95a5" font-weight="400" text-anchor="start">27/11</text>
+<line x1="610.0" y1="84" x2="610.0" y2="518" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="610.0" y="536" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" fill="#fbbf24" font-weight="600" text-anchor="middle">aujourd'hui (02/10)</text>
+<line x1="902.2" y1="84" x2="902.2" y2="518" stroke="#f87171" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="902.1739130434783" y="536" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" fill="#f87171" font-weight="600" text-anchor="end">Présentation au plus tard (04/12)</text>
+</svg>

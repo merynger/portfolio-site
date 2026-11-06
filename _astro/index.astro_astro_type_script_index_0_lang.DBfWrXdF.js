@@ -1,0 +1,1 @@
+function e(){document.querySelectorAll(`.card`).forEach(e=>{e.addEventListener(`mousemove`,t=>{let n=e.getBoundingClientRect(),r=t.clientX-n.left,i=t.clientY-n.top;e.style.setProperty(`--mouse-x`,`${r}px`),e.style.setProperty(`--mouse-y`,`${i}px`)})})}document.addEventListener(`astro:page-load`,e);
